@@ -28,19 +28,17 @@ Para poder ver la arquitectura del sistema operativo y su versión de kernel.
 uname -a
 ```
 ### Núcleos físicos
-Para poder mostrar el número de núcleos físicos haremos uso del fichero /proc/cpuinfo el cual proporciona información acerca del procesador: su tipo, marca, modelo, rendimiento, etc. Usaremos el comando el siguiente comando con el comando grep buscaremos dentro del fichero "physical id" y con wc -l contaremos las líneas del resultado de grep.
+Cuenta el número de identificadores físicos de CPU presentes en el sistema. Utiliza ```grep``` para encontrar las líneas que contienen "physical id" en el archivo /proc/cpuinfo y luego cuenta las líneas con ```wc -l```.
 ```
 grep "physical id" /proc/cpuinfo | wc -l
 ```
 ### Núcleos virtuales
-Para poder mostrar el número de núcleos virtuales es muy parecido al anterior. El uso es prácticamente el mismo al anterior, solo que en vez de contar las líneas de "physical id" lo haremos de processor. Lo hacemos así por el mismo motivo de antes, la manera de cuantificar marca 0 si hay un procesador.
+Similar al anterior, esta línea cuenta el número de procesadores virtuales (hilos) en el sistema.
 ```
 grep processor /proc/cpuinfo | wc -l
 ```
 ### Memoria RAM
-Para mostrar la memoria RAM haremos uso del comando ```free``` para así ver al momento información sobre la RAM, la parte usada, libre, reservada para otros recursos, etc.
-
-Una vez hemos ejecutado este comando debemos filtrar nuestra búsqueda, ya que no necesitamos toda la información que nos aporta, lo primero que debemos mostrar es la memoria usada, para ello haremos uso del comando ```awk``` que lo que hace este comando es para procesar datos basados en archivos de texto, es decir, podremos utilizar los datos que nos interesen de X fichero.
+Utilizan el comando ```free --mega``` para obtener información sobre la memoria en megabytes y luego utilizan ```awk``` para filtrar y calcular el uso de la memoria y el porcentaje de uso.
 
 Lo que haremos será comparar si la primera palabra de una fila es igual a "Mem:" printaremos la tercera palabra de esa fila que será la memoria usada. Todo el comando junto sería:
 ```
@@ -56,8 +54,55 @@ Por última parte debemos calcular el % de memoria usada. El comando de nuevo es
 ```
 free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'
 ```
-
-### Resultado Script
+### Memoria del disco
+Para poder ver la memoria del disco ocupada y disponible utilizaremos el comando ```df``` que significa "disk filesystem", se utiliza para obtener un resumen completo del uso del espacio en disco. Como en el subject indica la memoria utilizada se muestra en MB, así que entonces utilizaremos el flag -m. Acto seguido haremos un grep para que solo nos muestre las líneas que contengan "/dev/" y seguidamente volveremos a hacer otro grep con el flag -v para excluir las líneas que contengan "/boot". Por último utilizaremos el comando awk y sumaremos el valor de la tercera palabra de cada línea para una vez sumadas todas las líneas printar el resultado final de la suma.
+```
+df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use}'
+```
+Para obtener el espacio total utilizaremos un comando muy parecido. Las únicas diferencias serán que los valores que sumaremos serán los $2 en vez de $3 y la otra diferencia es que en el subject aparece el tamaño total en Gb así que como el resultado de la suma nos da el número en Mb debemos transformarlo a Gb, para ello debemos dividir el número entre 1024 y quitar los decimales.
+```
+df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_result += $2} END {printf ("%.1fGb\n"), memory_result/1024}'
+```
+### Porcentaje uso de CPU
+Estas líneas obtienen la carga de la CPU. Utilizan el comando ```vmstat``` para obtener información sobre la actividad del sistema y ```awk``` para extraer la carga de la CPU. También daremos uso del comando ```tail -1```, que este lo que nos va a permitir es que solo produzca el output la última línea, entonces de las 4 generadas solo se printará la última. Por último, solo printaremos la palabra 15 que es el uso de memoria disponible.
+```
+vmstat 1 4 | tail -1 | awk '{print $15}'
+```
+### Último reinicio
+Esta línea obtiene la fecha y hora del último arranque del sistema. Utiliza el comando ```who -b``` para obtener la información de inicio y ```awk``` para extraer la fecha y hora.
+```
+who -b | awk '$1 == "system" {print $3 " " $4}'
+```
+### Uso de LVM
+Esta línea verifica si LVM (Logical Volume Manager) está en uso en el sistema. Utiliza ```lsblk``` para listar los dispositivos de bloques y ```grep``` para buscar "lvm". Luego, ```wc -l``` cuenta las líneas para determinar si hay más de cero, lo que significa que LVM está en uso.
+```
+if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi
+```
+### Conexiones TCP
+Esta línea cuenta el número de conexiones TCP establecidas. Utiliza ```ss``` para obtener información sobre los sockets y ```grep``` para buscar conexiones establecidas.
+```
+ss -ta | grep ESTAB | wc -l
+```
+### Números de usuarios
+Esta línea cuenta el número de usuarios conectados. Utiliza el comando ```users``` para obtener una lista de usuarios y ```wc -w``` para contar las palabras en la lista.
+```
+users | wc -w
+```
+### Dirección IP y MAC
+Para obtener la dirección del host haremos uso del comando:
+```
+hostname -I
+```
+Y ```ip link``` con ```grep``` y ```awk``` para obtener la dirección MAC:
+```
+ip link | grep "link/ether" | awk '{print $2}'
+```
+### Número de comandos ejecutados con sudo
+Esta línea cuenta el número de comandos ejecutados con ```sudo```. Utiliza ```journalctl``` para buscar en los registros y ```grep``` para buscar comandos ```sudo```.
+```
+journalctl _COMM=sudo | grep COMMAND | wc -l)
+```
+### ⚠️Resultado Script
 ⚠️ A la hora de la defensa tendrás que explicar lo que hace cada comando ⚠️
 ```
 #!/bin/bash
