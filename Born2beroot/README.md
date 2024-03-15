@@ -22,6 +22,11 @@ Este proyecto consiste en configurar tu primer servidor siguiendo una serie de n
 ## Pasos a seguir
 Los pasos que he seguido durante la realización de este proyecto han sido en este [enlace](https://github.com/gemartin99/Born2beroot-Tutorial).
 ### 🚨Script
+#### Architecture
+Para poder ver la arquitectura del sistema operativo y su versión de kernel.
+```
+uname -a
+```
 ⚠️ A la hora de la defensa tendrás que explicar lo que hace cada comando ⚠️
 ```
 #!/bin/bash
