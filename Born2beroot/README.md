@@ -3,7 +3,7 @@
 2. [Requisitos parte obligatoria](#requisitos-parte-obligatoria)
 3. [Pasos a seguir](#pasos-a-seguir)
    - [Script](#script)
-   	- [Architecture](#architecture) 
+	- [Architecture](#architecture) 
 4. [Defensa](#defensa)
    - [¿Qué es una máquina virtual?](#qu%C3%A9-es-una-m%C3%A1quina-virtual)
    - [¿Qué sistema operativo se ha elegido?](#qu%C3%A9-sistema-operativo-se-ha-elegido)
