@@ -185,9 +185,9 @@ En resumen, podríamos decir que AppArmor funciona como una especie de "guardiá
 De forma más sencilla, es como un "gerente" inteligente para tus discos duros en Linux. Te permite combinar varios discos en uno solo, crear "pedazos" de espacio que puedes usar como si fueran discos individuales, y cambiar el tamaño de estos "pedazos" sobre la marcha, sin necesidad de apagar tu computadora. Es útil porque te da más flexibilidad para organizar y gestionar el almacenamiento en tu computadora.
 ## Comandos
 - Para comprobar que no hay ninguna interfaz gráfica.
-```
-ls /usr/bin/*session
-```
+	```
+	ls /usr/bin/*session
+	```
 - Comprobar que el servicion UFW está en uso.
 ```
 sudo ufw status
