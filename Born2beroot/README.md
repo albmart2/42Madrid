@@ -2,8 +2,8 @@
 1. [¿En qué consiste este proyecto?](#en-qu%C3%A9-consiste-este-proyecto)
 2. [Requisitos parte obligatoria](#requisitos-parte-obligatoria)
 3. [Pasos a seguir](#pasos-a-seguir)
-   - [Script](#script)
-4. [Defensa](#defensa)
+4. [Script](#script)
+5. [Defensa](#defensa)
    - [¿Qué es una máquina virtual?](#qu%C3%A9-es-una-m%C3%A1quina-virtual)
    - [¿Qué sistema operativo se ha elegido?](#qu%C3%A9-sistema-operativo-se-ha-elegido)
    - [Debian vs Rocky](#debian-vs-rocky)
@@ -21,13 +21,13 @@ Este proyecto consiste en configurar tu primer servidor siguiendo una serie de n
 - Configurar una política de contraseñas fuerte.
 ## Pasos a seguir
 Los pasos que he seguido durante la realización de este proyecto han sido en este [enlace](https://github.com/gemartin99/Born2beroot-Tutorial).
-### 🚨Script
-#### Architecture
+## 🚨Script
+### Architecture
 Para poder ver la arquitectura del sistema operativo y su versión de kernel.
 ```
 uname -a
 ```
-#### Núcleos físicos
+### Núcleos físicos
 Para poder mostrar el número de núcleos físicos haremos uso del fichero /proc/cpuinfo el cual proporciona información acerca del procesador: su tipo, marca, modelo, rendimiento, etc. Usaremos el comando el siguiente comando con el comando grep buscaremos dentro del fichero "physical id" y con wc -l contaremos las líneas del resultado de grep.
 ```
 grep "physical id" /proc/cpuinfo | wc -l
