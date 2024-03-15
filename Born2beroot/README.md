@@ -57,6 +57,7 @@ Por última parte debemos calcular el % de memoria usada. El comando de nuevo es
 free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'
 ```
 
+### Resultado Script
 ⚠️ A la hora de la defensa tendrás que explicar lo que hace cada comando ⚠️
 ```
 #!/bin/bash
