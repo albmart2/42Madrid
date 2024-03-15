@@ -1,6 +1,6 @@
 # 42 Madrid | Fundación Telefónica
 
-Soy Alba Martín Muñoz, una estudiante entusiasta en 42 Madrid.
+Soy Alba Martín Muñoz, una estudiante entusiasta de 42 en Madrid.
 
 En mi tiempo en 42, he tenido el privilegio de sumergirme en un entorno de aprendizaje único, donde la colaboración, la experimentación y el pensamiento crítico son fundamentales para el proceso educativo. Desde el primer día, he estado desafiándome a mí misma para superar obstáculos y ampliar mis habilidades técnicas.
 
