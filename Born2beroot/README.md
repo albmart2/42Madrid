@@ -34,20 +34,28 @@ grep "physical id" /proc/cpuinfo | wc -l
 ```
 ### Núcleos virtuales
 Para poder mostrar el número de núcleos virtuales es muy parecido al anterior. El uso es prácticamente el mismo al anterior, solo que en vez de contar las líneas de "physical id" lo haremos de processor. Lo hacemos así por el mismo motivo de antes, la manera de cuantificar marca 0 si hay un procesador.
-```grep processor /proc/cpuinfo | wc -l ```
+```
+grep processor /proc/cpuinfo | wc -l
+```
 ### Memoria RAM
 Para mostrar la memoria RAM haremos uso del comando ```free``` para así ver al momento información sobre la RAM, la parte usada, libre, reservada para otros recursos, etc.
 
 Una vez hemos ejecutado este comando debemos filtrar nuestra búsqueda, ya que no necesitamos toda la información que nos aporta, lo primero que debemos mostrar es la memoria usada, para ello haremos uso del comando ```awk``` que lo que hace este comando es para procesar datos basados en archivos de texto, es decir, podremos utilizar los datos que nos interesen de X fichero.
 
 Lo que haremos será comparar si la primera palabra de una fila es igual a "Mem:" printaremos la tercera palabra de esa fila que será la memoria usada. Todo el comando junto sería:
-```free --mega | awk '$1 == "Mem:" {print $3}'```
+```
+free --mega | awk '$1 == "Mem:" {print $3}'
+```
 
 Para obtener la memoria total el comando es prácticamente igual al anterior, lo único que deberemos cambiar es que en vez de printar la tercera palabra de la fila queremos la segunda:
-```free --mega | awk '$1 == "Mem:" {print $2}'```
+```
+free --mega | awk '$1 == "Mem:" {print $2}'
+```
 
 Por última parte debemos calcular el % de memoria usada. El comando de nuevo es parecido a los anteriores, la única modificación que haremos en la parte del printeo. Como la operación para conseguir el tanto porciento no es exacta, nos puede dar muchos decimales y en el subject solo aparecen 2 así que nosotros haremos lo mismo, por eso utilizamos %.2f para que así solo se muestren 2 decimales. Otra cosa que quizás no sepas es en printf para que se muestre un % hay que poner %%. 
-```free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'```
+```
+free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'
+```
 
 ⚠️ A la hora de la defensa tendrás que explicar lo que hace cada comando ⚠️
 ```
