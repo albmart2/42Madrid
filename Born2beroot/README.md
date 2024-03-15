@@ -1,5 +1,11 @@
 # Born2beroot
-1. ¿En qué consiste este proyecto?
+1. [¿En qué consiste este proyecto?](#en-qu%C3%A9-consiste-este-proyecto)
+2. [Requisitos parte obligatoria](#requisitos-parte-obligatoria)
+3. [Pasos a seguir](#pasos-a-seguir)
+4. [Defensa](#defensa)
+    - [¿Qué es una máquina virtual?](#qu%C3%A9-es-una-m%C3%A1quina-virtual)
+    - [¿Qué sistema operativo se ha elegido?](#qu%C3%A9-sistema-operativo-se-ha-elegido)
+    - [Debian vs Rocky](#debian-vs-rocky)
 ## ¿En qué consiste este proyecto?
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
 ## Requisitos parte obligatoria
