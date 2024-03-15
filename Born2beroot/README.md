@@ -188,4 +188,70 @@ De forma más sencilla, es como un "gerente" inteligente para tus discos duros e
 ```
 ls /usr/bin/*session
 ```
-- 
+- Comprobar que el servicion UFW está en uso.
+```
+sudo ufw status
+```
+```
+sudo service ufw status
+```
+- Comprobar que SSH está en uso.
+```
+sudo service ssh status
+```
+- Comprobar que se utiliza el SO Debian o Rocky
+```
+uname -v
+```
+```
+uname --kernel-version
+```
+- Comprobar que el usuario este dentro de los grupos "sudo" y "user42"
+```
+getent group sudo
+```
+```
+getent group user42
+```
+- Crear un nuevo usuario.
+```
+sudo adduser <name_user>
+```
+- Crear un nuevo grupo
+```
+sudo addgroup <name_group>
+```
+- Añadir el usuario al nuevo grupo
+```
+sudo adduser <name_user> <name_group>
+```
+- Para comprobar que se haya introducido correctamente.
+```
+getent group <name_group>
+```
+- Comprobar que el hostname de máquina es correcto
+```
+hostname
+```
+- Modificar hostname para remplazar tu login por el del evaluador. ```sudo nano /etc/hostname``` y remplazamos nuestro login por el nuevo.
+- ```sudo nano /etc/hosts``` y remplazamos nuestro login por el nuevo.
+- Reiniciar la máquina.
+```
+sudo reboot
+```
+- Una vez nos hemos logueado de nuevo podemos ver como el hostname se ha cambiado correctamente.
+```
+hostname
+```
+- Comprobar que todas las particiones son como indica el subject
+```
+lsblk
+```
+- Comprobar que sudo está instalado.
+```
+dpkg -s sudo
+```
+- Introducimos el nuevo usuario dentro del grupo sudo.
+```
+sudo adduser name_user sudo
+```
