@@ -9,3 +9,6 @@ Este proyecto consiste en configurar tu primer servidor siguiendo una serie de n
 - Configurar tu sistema operativo con el firewall UFW.
 - Configurar una política de contraseñas fuerte.
 ## Defensa
+### ¿Qué es una máquina virtual?
+Una máquina virtual consiste en simular mediante software algún recurso tecnológico físico.
+En resumen, es como tener uno o varios ordenadores dentro de nuestro equipo.
