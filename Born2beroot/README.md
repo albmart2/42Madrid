@@ -2,14 +2,14 @@
 1. [¿En qué consiste este proyecto?](#en-qu%C3%A9-consiste-este-proyecto)
 2. [Requisitos parte obligatoria](#requisitos-parte-obligatoria)
 3. [Pasos a seguir](#pasos-a-seguir)
-4. [Script](#script)
-5. [Defensa](#defensa)
-    - [¿Qué es una máquina virtual?](#qu%C3%A9-es-una-m%C3%A1quina-virtual)
-    - [¿Qué sistema operativo se ha elegido?](#qu%C3%A9-sistema-operativo-se-ha-elegido)
-    - [Debian vs Rocky](#debian-vs-rocky)
-    - [APT vs APTITUDE](#apt-vs-aptitude)
-    - [¿Qué es APPAmor?](#qu%C3%A9-es-appamor)
-    - [¿Qué es LVM?](#qu%C3%A9-es-lvm)
+   - [Script](#script)
+4. [Defensa](#defensa)
+   - [¿Qué es una máquina virtual?](#qu%C3%A9-es-una-m%C3%A1quina-virtual)
+   - [¿Qué sistema operativo se ha elegido?](#qu%C3%A9-sistema-operativo-se-ha-elegido)
+   - [Debian vs Rocky](#debian-vs-rocky)
+   - [APT vs APTITUDE](#apt-vs-aptitude)
+   - [¿Qué es APPAmor?](#qu%C3%A9-es-appamor)
+   - [¿Qué es LVM?](#qu%C3%A9-es-lvm)
 ## ¿En qué consiste este proyecto?
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
 ## Requisitos parte obligatoria
@@ -22,7 +22,7 @@ Este proyecto consiste en configurar tu primer servidor siguiendo una serie de n
 ## Pasos a seguir
 Los pasos que he seguido durante la realización de este proyecto han sido en este [enlace](https://github.com/gemartin99/Born2beroot-Tutorial).
 ### 🚨Script
-⚠️A la hora de la defensa tendrás que explicar lo que hace cada comando⚠️
+⚠️ A la hora de la defensa tendrás que explicar lo que hace cada comando ⚠️
 ```
 #!/bin/bash
 
