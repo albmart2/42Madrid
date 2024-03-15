@@ -25,7 +25,9 @@ https://github.com/gemartin99/Born2beroot-Tutorial?tab=readme-ov-file#9-1-respue
 ### ¿Qué es una máquina virtual?
 Una máquina virtual consiste en simular mediante software algún recurso tecnológico físico. En resumen, es como tener uno o varios ordenadores dentro de nuestro equipo.
 ### ¿Qué sistema operativo se ha elegido?
-Para poder realizar este proyecto, se ha utilizado el sistema operativo Debian, ya que es mucho más sencillo trabajar con él y si se busca documentación o tutoriales, la gran mayoría de ellos se han realizado en Debian. Las diferencias entre Debian y Rocky se ven el siguiente punto.
+Para poder realizar este proyecto, se ha utilizado el sistema operativo Debian, ya que es mucho más sencillo trabajar con él y si se busca documentación o tutoriales, la gran mayoría de ellos se han realizado en Debian.
+
+Las diferencias entre Debian y Rocky se ven el siguiente punto.
 ### Debian vs Rocky
 ![debian vs rocky (1)](https://github.com/AlbaMartin17/42Madrid/assets/62957466/11af855b-744a-4bc6-acda-46c40c409ed7)
 ### APT vs APTITUDE
