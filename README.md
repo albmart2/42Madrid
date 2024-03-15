@@ -8,4 +8,4 @@ Este espacio en GitHub servirá como un escaparate de mis proyectos, tanto los q
 
 Gracias por visitar mi página y espero que disfruten explorando mi trabajo. ¡Juntas podemos construir un futuro más inclusivo y diverso en la tecnología!
 
-[![albmart2's 42 stats](https://badge.mediaplus.ma/darkblue/albmart2)]
+![albmart2's 42 stats](https://badge.mediaplus.ma/darkblue/albmart2)
