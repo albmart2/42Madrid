@@ -10,6 +10,7 @@
    - [APT vs APTITUDE](#apt-vs-aptitude)
    - [¿Qué es APPAmor?](#qu%C3%A9-es-appamor)
    - [¿Qué es LVM?](#qu%C3%A9-es-lvm)
+6. [Comandos](#comandos)
 ## ¿En qué consiste este proyecto?
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
 ## Requisitos parte obligatoria
@@ -182,3 +183,9 @@ En resumen, podríamos decir que AppArmor funciona como una especie de "guardiá
 - Es un Administrador de Volúmenes Lógicos, que proporciona un método para asignar espacipo en dispositivos de almacenamiento masivo, que es más flexible que los esquemas de particionado convencionales para almacenar volúmenes.
 
 De forma más sencilla, es como un "gerente" inteligente para tus discos duros en Linux. Te permite combinar varios discos en uno solo, crear "pedazos" de espacio que puedes usar como si fueran discos individuales, y cambiar el tamaño de estos "pedazos" sobre la marcha, sin necesidad de apagar tu computadora. Es útil porque te da más flexibilidad para organizar y gestionar el almacenamiento en tu computadora.
+## Comandos
+- Para comprobar que no hay ninguna interfaz gráfica.
+```
+ls /usr/bin/*session
+```
+- 
