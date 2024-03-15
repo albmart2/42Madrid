@@ -1,5 +1,5 @@
 # Born2beroot
-1. [¿En qué consiste este proyecto?]
+1. [¿En qué consiste este proyecto?] (#¿En qué consiste este proyecto?)
 ## ¿En qué consiste este proyecto?
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
 ## Requisitos parte obligatoria
