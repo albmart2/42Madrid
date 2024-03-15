@@ -3,7 +3,6 @@
 2. [Requisitos parte obligatoria](#requisitos-parte-obligatoria)
 3. [Pasos a seguir](#pasos-a-seguir)
    - [Script](#script)
-	- [Architecture](#architecture) 
 4. [Defensa](#defensa)
    - [¿Qué es una máquina virtual?](#qu%C3%A9-es-una-m%C3%A1quina-virtual)
    - [¿Qué sistema operativo se ha elegido?](#qu%C3%A9-sistema-operativo-se-ha-elegido)
@@ -28,6 +27,12 @@ Para poder ver la arquitectura del sistema operativo y su versión de kernel.
 ```
 uname -a
 ```
+#### Núcleos físicos
+Para poder mostrar el número de núcleos físicos haremos uso del fichero /proc/cpuinfo el cual proporciona información acerca del procesador: su tipo, marca, modelo, rendimiento, etc. Usaremos el comando el siguiente comando con el comando grep buscaremos dentro del fichero "physical id" y con wc -l contaremos las líneas del resultado de grep.
+```
+grep "physical id" /proc/cpuinfo | wc -l
+```
+
 ⚠️ A la hora de la defensa tendrás que explicar lo que hace cada comando ⚠️
 ```
 #!/bin/bash
