@@ -31,3 +31,8 @@ int  ft_printf(char const *, ...);
 |%x|Imprime un número hexadecimal (base 16) en minúsculas.|
 |%X|Imprime un número hexadecimal (base 16) en mayúsculas.|
 |%%|Para imprimir el símbolo del porcentaje.|
+## Parte bonus
+|BONUS|
+|-----|
+|Gestiona cualquier combinación de los siguientes flags: ’-0.’ y el ancho mínimo (field minimum width) bajo todas las conversiones posibles.|
+|Gestiona todos los siguientes flags: ’# +’ (sí, uno de ellos es un espacio).|
