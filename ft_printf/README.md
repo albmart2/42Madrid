@@ -13,6 +13,12 @@ Ejercicio que recrea la función printf en C
 ```
 int  ft_printf(char const *, ...);
 ```
+### Requisitos
+- No implementes la gestión del buffer del printf() original.
+- Deberás implementar las siguientes conversiones: cspdiuxX %
+- Tu función se comparará con el printf() original.
+- Tienes que usar el comando ar para crear tu librería. El uso de libtool está prohibido.
+- Tu archivo libftprintf.a deberá ser creado en la raiz de tu repositorio.
 ### Implementar las conversiones
 |Tipo|Significado|
 |----|-----------|
