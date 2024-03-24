@@ -4,3 +4,11 @@ Ejercicio que recrea la función printf en C
 |Tipo|Significado|
 |----|-----------|
 |%c|Imprime un solo carácter.|
+|%s|Imprime una string (como se define por defecto en C).|
+|%p||
+|%d||
+|%i||
+|%u||
+|%x||
+|%X||
+|%%||
