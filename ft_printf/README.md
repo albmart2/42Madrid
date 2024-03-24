@@ -1,6 +1,8 @@
 # FT_PRINTF
 Ejercicio que recrea la función printf en C
 ## Parte obligatoria
+|Info|Descripción|
+|----|-----------|
 |Nombre de programa|libftprintf.a|
 |Archivos a entregar|Makefile, *.h, */*.h, *.c, */*.c|
 |Makefile|NAME, all, clean, fclean, re|
