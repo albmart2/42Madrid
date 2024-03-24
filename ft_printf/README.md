@@ -34,5 +34,5 @@ int  ft_printf(char const *, ...);
 ## Parte bonus
 |BONUS|
 |-----|
-- Gestiona cualquier combinación de los siguientes flags: ’-0.’ y el ancho mínimo (field minimum width) bajo todas las conversiones posibles.
-- Gestiona todos los siguientes flags: ’# +’ (sí, uno de ellos es un espacio).
+|- Gestiona cualquier combinación de los siguientes flags: ’-0.’ y el ancho mínimo (field minimum width) bajo todas las conversiones posibles.|
+|- Gestiona todos los siguientes flags: ’# +’ (sí, uno de ellos es un espacio).|
