@@ -10,7 +10,9 @@ Ejercicio que recrea la función printf en C
 |Se permite usar libft|Yes|
 |Descripción|Escribe una librería que contenga la función ft_printf(), que imite el printf() original|
 ### Prototipo de ft_printf()
-```int  ft_printf(char const *, ...);```
+```
+int  ft_printf(char const *, ...);
+```
 ### Implementar las conversiones
 |Tipo|Significado|
 |----|-----------|
