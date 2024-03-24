@@ -9,6 +9,8 @@ Ejercicio que recrea la función printf en C
 |Funciones autorizadas|malloc, free, write, va_start, va_arg, va_copy, va_end|
 |Se permite usar libft|Yes|
 |Descripción|Escribe una librería que contenga la función ft_printf(), que imite el printf() original|
+### Prototipo de ft_printf()
+'''int  ft_printf(char const *, ...);'''
 ### Implementar las conversiones
 |Tipo|Significado|
 |----|-----------|
