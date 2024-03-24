@@ -1,6 +1,13 @@
 # FT_PRINTF
 Ejercicio que recrea la función printf en C
-## Implementar las conversiones
+## Parte obligatoria
+|Nombre de programa|libftprintf.a|
+|Archivos a entregar|Makefile, *.h, */*.h, *.c, */*.c|
+|Makefile|NAME, all, clean, fclean, re|
+|Funciones autorizadas|malloc, free, write, va_start, va_arg, va_copy, va_end|
+|Se permite usar libft|Yes|
+|Descripción|Escribe una librería que contenga la función ft_printf(), que imite el printf() original|
+### Implementar las conversiones
 |Tipo|Significado|
 |----|-----------|
 |%c|Imprime un solo carácter.|
