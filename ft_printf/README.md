@@ -20,17 +20,17 @@ int  ft_printf(char const *, ...);
 - Tienes que usar el comando ar para crear tu librería. El uso de libtool está prohibido.
 - Tu archivo libftprintf.a deberá ser creado en la raiz de tu repositorio.
 ### Implementar las conversiones
-|Tipo|Significado|
-|----|-----------|
-|%c|Imprime un solo carácter.|
-|%s|Imprime una string (como se define por defecto en C).|
-|%p|El puntero void * dado como argumento se imprime en formato hexadecimal.|
-|%d|Imprime un número decimal (base 10).|
-|%i|Imprime un entero en base 10.|
-|%u|Imprime un número decimal (base 10) sin signo.|
-|%x|Imprime un número hexadecimal (base 16) en minúsculas.|
-|%X|Imprime un número hexadecimal (base 16) en mayúsculas.|
-|%%|Para imprimir el símbolo del porcentaje.|
+|Tipo|Significado|Realizado|
+|----|-----------|---------|
+|%c|Imprime un solo carácter.|Sí|
+|%s|Imprime una string (como se define por defecto en C).|Sí|
+|%p|El puntero void * dado como argumento se imprime en formato hexadecimal.|No|
+|%d|Imprime un número decimal (base 10).|No|
+|%i|Imprime un entero en base 10.|Sí|
+|%u|Imprime un número decimal (base 10) sin signo.|No|
+|%x|Imprime un número hexadecimal (base 16) en minúsculas.|No|
+|%X|Imprime un número hexadecimal (base 16) en mayúsculas.|No|
+|%%|Para imprimir el símbolo del porcentaje.|Sí|
 ## Parte bonus
 |BONUS|
 |-----|
