@@ -11,7 +11,7 @@ Ejercicio que recrea la función printf en C
 |Descripción|Escribe una librería que contenga la función ft_printf(), que imite el printf() original|
 ### Prototipo de ft_printf()
 ```
-int  ft_printf(char const *, ...);
+int  ft_printf(char const *src, ...);
 ```
 ### Requisitos
 - No implementes la gestión del buffer del printf() original.
