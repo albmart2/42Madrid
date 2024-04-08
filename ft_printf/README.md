@@ -25,7 +25,7 @@ int  ft_printf(char const *src, ...);
 |%c|Imprime un solo carácter.|Sí|
 |%s|Imprime una string (como se define por defecto en C).|Sí|
 |%p|El puntero void * dado como argumento se imprime en formato hexadecimal.|No|
-|%d|Imprime un número decimal (base 10).|No|
+|%d|Imprime un número decimal (base 10).|Sí|
 |%i|Imprime un entero en base 10.|Sí|
 |%u|Imprime un número decimal (base 10) sin signo.|Sí|
 |%x|Imprime un número hexadecimal (base 16) en minúsculas.|No|
