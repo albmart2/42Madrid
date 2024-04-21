@@ -7,7 +7,7 @@ Ejercicio que recrea la función printf en C
 |Archivos a entregar|Makefile, *.h, */*.h, *.c, */*.c|
 |Makefile|NAME, all, clean, fclean, re|
 |Funciones autorizadas|malloc, free, write, va_start, va_arg, va_copy, va_end|
-|Se permite usar libft|Yes|
+|Se permite usar libft|Sí|
 |Descripción|Escribe una librería que contenga la función ft_printf(), que imite el printf() original|
 ### Prototipo de ft_printf()
 ```
