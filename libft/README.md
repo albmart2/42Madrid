@@ -1,2 +1,5 @@
 # LIBFT
-Recreación de algunas funciones en C
+|Contenido|¿Están realizados?|
+|---------|------------------|
+|Parte Obligatoria|Sí|
+|BONUS|No|
