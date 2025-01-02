@@ -25,13 +25,18 @@ int main(){
 
     nombre_archivo = "texto.txt";
     archivo = fopen("texto.txt", "r");
+    char caracteres[1000000];
     if (archivo == NULL) {
         // Si fopen devuelve NULL, significa que hubo un error al abrir el archivo
         printf("No se pudo abrir el archivo '%s'.\n", nombre_archivo);
-        return 1;  // Salir con un código de error
+        return 1; 
     }
     // Si llegamos aquí, el archivo se abrió correctamente
     printf("El archivo '%s' se abrió correctamente.\n", nombre_archivo);
+    while (fgets(caracteres, 100, archivo) != NULL)
+ 	{
+        printf("%s",caracteres);
+ 	}
     fclose(archivo);
     return 0;
 }
