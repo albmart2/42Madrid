@@ -20,14 +20,16 @@
 }*/
 
 int main(){
-    FILE *archivo = fopen("texto.txt", "r");
-    const char *nombre_archivo = "texto.txt";
+    const char *nombre_archivo;
+    FILE *archivo;
+
+    nombre_archivo = "texto.txt";
+    *archivo = fopen("texto.txt", "r");
     if (archivo == NULL) {
         // Si fopen devuelve NULL, significa que hubo un error al abrir el archivo
         printf("No se pudo abrir el archivo '%s'.\n", nombre_archivo);
         return 1;  // Salir con un código de error
     }
-
     // Si llegamos aquí, el archivo se abrió correctamente
     printf("El archivo '%s' se abrió correctamente.\n", nombre_archivo);
     fclose(archivo);
