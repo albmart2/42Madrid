@@ -24,7 +24,7 @@ int main(){
     FILE *archivo;
 
     nombre_archivo = "texto.txt";
-    *archivo = fopen("texto.txt", "r");
+    archivo = fopen("texto.txt", "r");
     if (archivo == NULL) {
         // Si fopen devuelve NULL, significa que hubo un error al abrir el archivo
         printf("No se pudo abrir el archivo '%s'.\n", nombre_archivo);
