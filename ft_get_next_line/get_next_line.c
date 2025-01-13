@@ -12,29 +12,41 @@
 
 #include "get_next_line.h"
 #include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
 
-/*char    *get_next_line(int fd){
-    fprintf(fd, "This is testing for fprintf...\n");
-    fclose(f);
+char	*get_next_line(int fd)
+{
+	//Donde vamos a guardar la linea
+	static char	buffer[BUFFER_SIZE+1];
+	//Donde vamos a guardar los bytes a la hora de guardar la linea para imprimirlo después
+	char bytes;
+	char *line;
+	int i;
 
-}*/
+	if (fd < 0 || BUFFER_SIZE <= 0)
+	{
+		return (NULL);
+	}
+	bytes = read(fd, buffer, BUFFER_SIZE);
+	line = malloc(bytes + 1);
+	if (!line)
+		return (NULL);
 
-int main(){
-    const char *nombre_archivo;
-    FILE *archivo;
+	i = 0;
+	while (i <= bytes)
+	{
+		line[i] = buffer[i];
+		i++;
+	}
+	
+	return (line);
+	
+}
 
-    nombre_archivo = "texto.txt";
-    archivo = fopen("texto.txt", "r");
-    char caracteres[1000000];
-    if (archivo == NULL) {
-        // Si fopen devuelve NULL, significa que hubo un error al abrir el archivo
-        return 1; 
-    }
-    // Si llegamos aquí, el archivo se abrió correctamente
-    while (fgets(caracteres, 100, archivo) != NULL)
- 	{
-        printf("%s",caracteres);
- 	}
-    fclose(archivo);
-    return 0;
+int	main()
+{
+	printf("%s",get_next_line(open("prueba.txt", O_RDONLY, S_IRUSR)));
+	return (0);
 }
