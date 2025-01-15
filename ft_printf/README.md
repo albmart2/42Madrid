@@ -36,3 +36,7 @@ int  ft_printf(char const *src, ...);
 |-----|
 |- Gestiona cualquier combinación de los siguientes flags: ’-0.’ y el ancho mínimo (field minimum width) bajo todas las conversiones posibles.|
 |- Gestiona todos los siguientes flags: ’# +’ (sí, uno de ellos es un espacio).|
+
+|**NOTA**|
+|--------|
+|*Aún no presentado*|

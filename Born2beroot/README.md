@@ -256,3 +256,6 @@ De forma más sencilla, es como un "gerente" inteligente para tus discos duros e
 	```
 	sudo adduser name_user sudo
 	```
+|**NOTA**|
+|--------|
+|*Aún no presentado*|
