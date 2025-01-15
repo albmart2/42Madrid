@@ -24,6 +24,6 @@ Recreación de get_next_line en C.
 - Tu programa debe compilar con el flag -D BUFFER_SIZE=xx. Este flag se utilizará para determinar el tamaño del buffer de las lecturas de tu get_next_line(). Este parámetro será modificado por tus evaluadores y por Moulinette para probar tu programa.
 - El programa se compilará de la siguiente forma (se utiliza como ejemplo un tamaño de buffer de 42):
 
-    *cc -Wall -Werror -Wextra -D BUFFER_SIZE=42 <archivos>.c.*
+&nbsp*cc -Wall -Werror -Wextra -D BUFFER_SIZE=42 <archivos>.c.*
 - Se considera que get_next_line() tiene un comportamiento indeterminado si el archivo al que apunta el fd ha cambiado desde la última vez que se llamó, siempre que read() no haya llegado al final del archivo.
 - Se considera que get_next_line() tiene un comportamiento indeterminado cuando lo que se lee es un archivo binario. Sin embargo, puedes implementar alguna manera lógica de sortear este problema, si quieres
