@@ -12,7 +12,11 @@
 
 #include "get_next_line.h"
 #include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
 
+<<<<<<< HEAD
 char    *get_next_line(int fd){
     char caracteres[1000000];
     if (fd == NULL) {
@@ -36,4 +40,39 @@ int main(){
     fd = open("texto.txt", O_RDONLY);
     get_next_line(fd);
     return 0;
+=======
+char	*get_next_line(int fd)
+{
+	//Donde vamos a guardar la linea
+	static char	buffer[BUFFER_SIZE+1];
+	//Donde vamos a guardar los bytes a la hora de guardar la linea para imprimirlo después
+	char bytes;
+	char *line;
+	int i;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+	{
+		return (NULL);
+	}
+	bytes = read(fd, buffer, BUFFER_SIZE);
+	line = malloc(bytes + 1);
+	if (!line)
+		return (NULL);
+
+	i = 0;
+	while (i <= bytes)
+	{
+		line[i] = buffer[i];
+		i++;
+	}
+	
+	return (line);
+	
+}
+
+int	main()
+{
+	printf("%s",get_next_line(open("prueba.txt", O_RDONLY, S_IRUSR)));
+	return (0);
+>>>>>>> refs/remotes/origin/main
 }
