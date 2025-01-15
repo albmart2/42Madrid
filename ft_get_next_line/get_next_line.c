@@ -18,35 +18,25 @@
 
 char	*get_next_line(int fd)
 {
-	//Donde vamos a guardar la linea
-	static char	buffer[BUFFER_SIZE+1];
-	//Donde vamos a guardar los bytes a la hora de guardar la linea para imprimirlo después
-	char bytes;
-	char *line;
-	int i;
+	static char	buffer[BUFFER_SIZE + 1];
+	char		bytes;
+	char		*line;
+	int			i;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
-	{
-		return (NULL);
-	}
-	bytes = read(fd, buffer, BUFFER_SIZE);
 	line = malloc(bytes + 1);
-	if (!line)
+	if (fd < 0 || BUFFER_SIZE <= 0 || !line)
 		return (NULL);
-
+	bytes = read(fd, buffer, BUFFER_SIZE);
 	i = 0;
 	while (i <= bytes)
 	{
 		line[i] = buffer[i];
 		i++;
 	}
-	
 	return (line);
-	
 }
-
-int	main()
+/*int	main()
 {
 	printf("%s",get_next_line(open("prueba.txt", O_RDONLY, S_IRUSR)));
 	return (0);
-}
+}*/
