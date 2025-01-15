@@ -13,20 +13,9 @@
 #include "get_next_line.h"
 #include <stdio.h>
 
-/*char    *get_next_line(int fd){
-    fprintf(fd, "This is testing for fprintf...\n");
-    fclose(f);
-
-}*/
-
-int main(){
-    const char *nombre_archivo;
-    FILE *archivo;
-
-    nombre_archivo = "texto.txt";
-    archivo = fopen("texto.txt", "r");
+char    *get_next_line(int fd){
     char caracteres[1000000];
-    if (archivo == NULL) {
+    if (fd == NULL) {
         // Si fopen devuelve NULL, significa que hubo un error al abrir el archivo
         return 1; 
     }
@@ -36,5 +25,15 @@ int main(){
         printf("%s",caracteres);
  	}
     fclose(archivo);
+    return 0;
+
+}
+
+int main(){
+
+    int fd;
+
+    fd = open("texto.txt", O_RDONLY);
+    get_next_line(fd);
     return 0;
 }
