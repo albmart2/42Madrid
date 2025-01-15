@@ -1,7 +1,7 @@
 # GET_NEXT_LINE
 Recreación de get_next_line en C.
 ## Parte obligatoria
-|INFO|DESCRIPCIÓN|
+|**INFO**|**DESCRIPCIÓN**|
 |----|-----------|
 |Prototipo|char *get_next_line(int fd)|
 |Archivos a entregar|get_next_line.c, get_next_line_utils.c, get_next_line.h|
@@ -27,3 +27,7 @@ Recreación de get_next_line en C.
 > *cc -Wall -Werror -Wextra -D BUFFER_SIZE=42 <archivos>.c.*
 - Se considera que get_next_line() tiene un comportamiento indeterminado si el archivo al que apunta el fd ha cambiado desde la última vez que se llamó, siempre que read() no haya llegado al final del archivo.
 - Se considera que get_next_line() tiene un comportamiento indeterminado cuando lo que se lee es un archivo binario. Sin embargo, puedes implementar alguna manera lógica de sortear este problema, si quieres
+
+|**NOTA**|
+|--------|
+|*Aún no presentado*|
