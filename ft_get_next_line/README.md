@@ -12,3 +12,12 @@ Recreación de get_next_line en C.
 - La función devolverá la línea que acaba de leer.
     - Si no hay nada más que leer, deberá devolver NULL.
     - Si ha ocurrido un error, deberá devolver NULL.
+- La función deberá de comportarse adecuadamente cuando lea de un archivo y cuando lea de stdin.
+- Cada línea devuelta debe de terminar en caracter n, excepto si se ha llegado al final del archivo.
+- En el header get_next_line.h se deberá tener como mínimo el prototipo de la función get_next_line.
+- Añade todas las funciones de ayuda que necesites en el archivo get_next_line_utils.c
+### Prohibido
+- Utilizar la libft en este proyecto.
+- Utilizar **lseek**.
+- Utlizar variables globales.
+## A la hora de corregir
