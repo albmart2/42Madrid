@@ -16,31 +16,6 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-<<<<<<< HEAD
-char    *get_next_line(int fd){
-    char caracteres[1000000];
-    if (fd == NULL) {
-        // Si fopen devuelve NULL, significa que hubo un error al abrir el archivo
-        return 1; 
-    }
-    // Si llegamos aquí, el archivo se abrió correctamente
-    while (fgets(caracteres, 100, archivo) != NULL)
- 	{
-        printf("%s",caracteres);
- 	}
-    fclose(archivo);
-    return 0;
-
-}
-
-int main(){
-
-    int fd;
-
-    fd = open("texto.txt", O_RDONLY);
-    get_next_line(fd);
-    return 0;
-=======
 char	*get_next_line(int fd)
 {
 	//Donde vamos a guardar la linea
@@ -74,5 +49,4 @@ int	main()
 {
 	printf("%s",get_next_line(open("prueba.txt", O_RDONLY, S_IRUSR)));
 	return (0);
->>>>>>> refs/remotes/origin/main
 }
