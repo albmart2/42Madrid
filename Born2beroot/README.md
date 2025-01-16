@@ -12,7 +12,7 @@
    - [¿Qué es LVM?](#qu%C3%A9-es-lvm)
    - [¿Qué es UFW?](#qu%C3%A9-es-ufw)
    - [¿Qué es SSH?](#qu%C3%A9-es-ssh)
-   - [sudo y su](#sudo_y_su)
+   - [Sudo y su](#sudo_y_su)
 6. [Comandos](#comandos)
 ## ¿En qué consiste este proyecto?
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
@@ -197,7 +197,7 @@ Secure Shell es un protocolo de red que sirve como mecanismo de autenticación e
 
 La comunicación se establece de forma encriptada y el puerto de comunicación por defecto es el 22. Por eso en este proyecto se nos pide cambiarlo, para aumentar la seguridad.
 
-### sudo y su
+### Sudo y su
 El usuario root es el usuario que tiene acceso administrativo al sistema. Por razones de seguridad, los usuarios normales no tienen acceso al sistema.
 
 Significa switch user o substitute user. Es un protocolo de aplicación que permite a los usuarios acceder a los archivos de una aplicación desde un host.
