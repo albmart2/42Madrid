@@ -5,11 +5,14 @@
 4. [Script](#script)
 5. [Defensa](#defensa)
    - [¿Qué es una máquina virtual?](#qu%C3%A9-es-una-m%C3%A1quina-virtual)
-   - [¿Qué sistema operativo se ha elegido?](#qu%C3%A9-sistema-operativo-se-ha-elegido)
+   - [Uso de VMs](#uso_de_vms)
    - [Debian vs Rocky](#debian-vs-rocky)
    - [APT vs APTITUDE](#apt-vs-aptitude)
    - [¿Qué es APPAmor?](#qu%C3%A9-es-appamor)
    - [¿Qué es LVM?](#qu%C3%A9-es-lvm)
+   - [¿Qué es UFW?](#qu%C3%A9-es-ufw)
+   - [¿Qué es SSH?](#qu%C3%A9-es-ssh)
+   - [sudo y su](sudo_y_su)
 6. [Comandos](#comandos)
 ## ¿En qué consiste este proyecto?
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
@@ -167,12 +170,12 @@ wall "	Architecture: $arch
 ## Defensa
 ### ¿Qué es una máquina virtual?
 Una máquina virtual consiste en simular mediante software algún recurso tecnológico físico. En resumen, es como tener uno o varios ordenadores dentro de nuestro equipo.
-### ¿Qué sistema operativo se ha elegido?
-Para poder realizar este proyecto, se ha utilizado el sistema operativo Debian, ya que es mucho más sencillo trabajar con él y si se busca documentación o tutoriales, la gran mayoría de ellos se han realizado en Debian.
-
-Las diferencias entre Debian y Rocky se ven el siguiente punto.
+### Uso de VMs
+Uno de los principales usos de las VMs es proveer un entorno de ejecución seguro y separado para tus aplicaciones. Se busca proveer condiciones replicables sea cual sea tu plataforma, pero la realidad es que el rendimiento y los recursos físicos del HW del host limitan esa supuesta replicabilidad universal.
 ### Debian vs Rocky
-![debian vs rocky (1)](https://github.com/AlbaMartin17/42Madrid/assets/62957466/11af855b-744a-4bc6-acda-46c40c409ed7)
+En teoría Rocky no es más complejo que Debian o viceversa. La principal razón para decantarse por uno u otro es porque Rocky fue desarrollado por una empresa y es un SO enfocado a producción para empresas mientras que Debian es un SO de código abierto desarrollado por una comunidad independiente y enfocado a la estabilidad, por lo que cada versión permanece más tiempo. Rocky fue lanzado en 2021 (aunque está basado en CentOS de RHEL, que es más antiguo) y Debian en 1993. Esa es la razón por la que es más fácil encontrar documentación de Debian adaptada a todos los niveles de experiencia, por lo que es más común elegir Debian para este proyecto.
+
+Todas las demás razones típicas también son válidas, como la comunidad más grande de Debian, más paquetes disponibles y soporte para una gama más amplia de arquitecturas.
 ### APT vs APTITUDE
 APT es más simple y rápido, mientras que aptitude ofrece una interfaz de usuario más avanzada y es mejor para resolver problemas de dependencias. La elección entre uno u otro depende de las preferencias personales y de las necesidades específicas del usuario. Muchos usuarios optan por APT para tareas simples y aptitude para tareas más complejas o cuando se enfrentan a problemas de dependencias.
 ### ¿Qué es APPAmor?
@@ -183,6 +186,22 @@ En resumen, podríamos decir que AppArmor funciona como una especie de "guardiá
 - Es un Administrador de Volúmenes Lógicos, que proporciona un método para asignar espacipo en dispositivos de almacenamiento masivo, que es más flexible que los esquemas de particionado convencionales para almacenar volúmenes.
 
 De forma más sencilla, es como un "gerente" inteligente para tus discos duros en Linux. Te permite combinar varios discos en uno solo, crear "pedazos" de espacio que puedes usar como si fueran discos individuales, y cambiar el tamaño de estos "pedazos" sobre la marcha, sin necesidad de apagar tu computadora. Es útil porque te da más flexibilidad para organizar y gestionar el almacenamiento en tu computadora.
+
+### ¿Qué es UFW?
+El firewall es un sistema de seguridad encargado de conceder o denegar el acceso entre redes configurando qué puertos abrir o cerrar.
+
+Un firewall sencillo es una interfaz para modificar la configuración del firewall sin comprometer la seguridad. Si UFW está habilitado se puede otorgar acceso a través de puertos específicos, lo cual es un requisito para este proyecto, y es muy útil usarlo en combinación con SSH. UFW también puede permitir o denegar IPs específicas y perfiles de aplicación.
+
+### ¿Qué es SSH?
+Secure Shell es un protocolo de red que sirve como mecanismo de autenticación en la comunicación entre un cliente y un host. Permite acceder, por ejemplo, a nuestra máquina virtual (cliente) desde nuestra máquina real (host) mediante línea de comandos.
+
+La comunicación se establece de forma encriptada y el puerto de comunicación por defecto es el 22. Por eso en este proyecto se nos pide cambiarlo, para aumentar la seguridad.
+
+### sudo y su
+El usuario root es el usuario que tiene acceso administrativo al sistema. Por razones de seguridad, los usuarios normales no tienen acceso al sistema.
+
+Significa switch user o substitute user. Es un protocolo de aplicación que permite a los usuarios acceder a los archivos de una aplicación desde un host.
+
 ## Comandos
 - Para comprobar que no hay ninguna interfaz gráfica.
 
