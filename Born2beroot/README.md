@@ -12,7 +12,7 @@
    - [¿Qué es LVM?](#qu%C3%A9-es-lvm)
    - [¿Qué es UFW?](#qu%C3%A9-es-ufw)
    - [¿Qué es SSH?](#qu%C3%A9-es-ssh)
-   - [sudo y su](sudo_y_su)
+   - [sudo y su](#sudo_y_su)
 6. [Comandos](#comandos)
 ## ¿En qué consiste este proyecto?
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
