@@ -15,3 +15,6 @@ Thank you for visiting my page, and I hope you enjoy exploring my work. Together
 |Proyecto|Nota|Bonus|
 |--------|----|-----|
 |Libft|100%|NO|
+|Born2beroot|-|NO|
+|get_next_line|-|NO|
+|ft_printf|-|NO|
