@@ -6,7 +6,7 @@
 /*   By: albmart2 <albmart2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 20:55:20 by albmart2          #+#    #+#             */
-/*   Updated: 2025/01/27 13:35:57 by albmart2         ###   ########.fr       */
+/*   Updated: 2025/01/27 13:57:26 by albmart2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,28 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
+char	*read_line(int fd, char *buffer)
+{
+	char	*line;
+	ssize_t	bytes_read;
+	int	i;
+
+	bytes_read = read(fd, buffer, BUFFER_SIZE);
+	line = malloc(bytes_read + 1);
+	if (fd < 0 || !buffer || bytes_read <= 0)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (i < bytes_read)
+	{
+		line[i] = buffer[i];
+		i++;
+	}
+	line[i] = '\0';
+	return (line);
+}
+
 char	*get_next_line(int fd)
 {
 	static char	buffer[BUFFER_SIZE + 1];
@@ -23,28 +45,10 @@ char	*get_next_line(int fd)
 	char		*temp;
 	ssize_t		bytes_read;
 
-	line = malloc(sizeof(char));
+	line = read_line(fd, buffer);
 	if (fd < 0 || BUFFER_SIZE <= 0 || !line)
 	{
 		return (NULL);
-	}
-	line[0] = '\0';
-	while (!ft_strchr(buffer, '\n'))
-	{
-		bytes_read = read(fd, buffer, BUFFER_SIZE);
-		if (bytes_read <= 0)
-		{
-			if (bytes_read == -1 || line[0] == '\0')
-			{
-				free(line);
-				return (NULL);
-			}
-			return (line);
-		}
-		buffer[bytes_read] = '\0';
-		temp = ft_strjoin(line, buffer);
-		free(line);
-		line = temp;
 	}
 	return (line);
 }
