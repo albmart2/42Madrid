@@ -18,5 +18,6 @@ char	*get_next_line(int fd);
 size_t	ft_strlen(const char *c);
 char	*ft_strchr(const char *string, int c);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*read_line(int fd, char *buffer);
 
 #endif
