@@ -5,17 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: albmart2 <albmart2@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/15 17:19:10 by albmart2          #+#    #+#             */
-/*   Updated: 2025/02/15 18:06:52 by albmart2         ###   ########.fr       */
+/*   Created: 2025/02/15 18:15:16 by albmart2          #+#    #+#             */
+/*   Updated: 2025/02/15 18:15:25 by albmart2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
+}
+
+void	ft_putchar(char c, int fd)
+{
+	write(1, &c, 1);
 }
 
 void	ft_putstr_fd(char *s, int fd)
